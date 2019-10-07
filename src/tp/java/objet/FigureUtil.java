@@ -98,7 +98,7 @@ public class FigureUtil {
 		return f;
 	}
 	
-	public Point[] getPoints(Figure[] F) {
+	public Point[] getPoints(Figure... F) {
 		
 		int nbPoints = 0;
 		
