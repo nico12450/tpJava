@@ -9,12 +9,14 @@ public class FigureUtil {
 	}
 	
 	private static Point getRandomPoint() {
+		
 		return new Point(getRandomInt(0,100),getRandomInt(0,100));
+		
 	}
 	
 	public static Rond getRandomRond() {
 		
-		return new Rond(getRandomPoint(),getRandomInt(1, 20));
+		return new Rond(getRandomPoint(),getRandomInt(1, 100));
 		
 	}
 	
@@ -25,7 +27,9 @@ public class FigureUtil {
 	}
 	
 	public static Carre getRandomCarre() {
+		
 		return new Carre(getRandomPoint(), getRandomInt(0, 100));
+		
 	}
 	
 	public static Figure getRandomFigure() {

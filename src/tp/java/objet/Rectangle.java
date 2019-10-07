@@ -37,10 +37,6 @@ public class Rectangle extends Figure {
 		return s;
 	}
 	
-	public void affiche() {
-		System.out.println(this);
-	}
-	
 	protected String getType() {
 		return "RECT";
 	}

@@ -15,9 +15,5 @@ public class Rond extends Figure{
 	public String toString() {
 		return "[ROND [" + p + ", " + r + "]]";
 	}
-	
-	public void affiche() {
-		System.out.println(this);
-	}
 
 }
