@@ -1,6 +1,6 @@
 package tp.java.objet;
 
-public class Rectangle {
+public class Rectangle extends Figure {
 	
 	private Point p; //point en haut à gauche
 	private int longueur;
@@ -15,11 +15,11 @@ public class Rectangle {
 	}
 	
 	public Point getPointBasGauche() {
-		return new Point(p.getX(),p.getY()*largeur);
+		return new Point(p.getX(),p.getY()+largeur);
 	}
 	
 	public Point getPointBasDroit() {
-		return new Point(p.getX()*longueur,p.getY()*largeur);
+		return new Point(p.getX()+longueur,p.getY()+largeur);
 	}
 	
 	public Point getPointHautGauche() {
@@ -27,7 +27,7 @@ public class Rectangle {
 	}
 	
 	public Point getPointHautDroit() {
-		return new Point(p.getX()*longueur,p.getY());
+		return new Point(p.getX()+longueur,p.getY());
 	}
 	
 	public String toString() {

@@ -1,6 +1,6 @@
 package tp.java.objet;
 
-public class Rond {
+public class Rond extends Figure{
 	
 	private Point p;
 	private int r;

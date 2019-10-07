@@ -16,6 +16,9 @@ public class Test {
 		
 		Carre c = new Carre(p,10);
 		c.affiche();
+		
+		Figure f = FigureUtil.getRandomFigure();
+		f.affiche();
 
 	}
 
