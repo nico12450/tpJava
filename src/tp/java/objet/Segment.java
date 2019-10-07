@@ -39,4 +39,18 @@ public class Segment extends Figure {
 	}
 
 
+	@Override
+	public Point[] getPoints() {
+		// TODO Auto-generated method stub
+		return new Point[] {origine,getPointFinal()};
+	}
+
+
+	@Override
+	public int getNbPoints() {
+		// TODO Auto-generated method stub
+		return 2;
+	}
+
+
 }

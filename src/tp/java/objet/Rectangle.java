@@ -48,6 +48,18 @@ public class Rectangle extends Figure implements Surfacable{
 		// TODO Auto-generated method stub
 		return longueur*largeur;
 	}
+
+	@Override
+	public Point[] getPoints() {
+		// TODO Auto-generated method stub
+		return new Point[] {getPointBasGauche(),getPointBasDroit(),getPointHautGauche(),getPointHautDroit()};
+	}
+
+	@Override
+	public int getNbPoints() {
+		// TODO Auto-generated method stub
+		return 4;
+	}
 	
 	
 }

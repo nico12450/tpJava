@@ -24,4 +24,16 @@ public class Rond extends Figure implements Surfacable{
 		return Math.PI*Math.pow(r,2);
 	}
 
+	@Override
+	public Point[] getPoints() {
+		// TODO Auto-generated method stub
+		return new Point[] {origine};
+	}
+
+	@Override
+	public int getNbPoints() {
+		// TODO Auto-generated method stub
+		return 1;
+	}
+
 }

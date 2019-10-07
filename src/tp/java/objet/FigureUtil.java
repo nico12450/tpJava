@@ -97,5 +97,28 @@ public class FigureUtil {
 		
 		return f;
 	}
+	
+	public Point[] getPoints(Figure[] F) {
+		
+		int nbPoints = 0;
+		
+		for(Figure f : F) {
+			nbPoints += f.getNbPoints();
+		}
+		
+		Point[] t = new Point[nbPoints];
+		int n = 0;
+		
+		for(Figure f : F) {
+			for(Point p : f.getPoints()) {
+				
+				t[n] = p;
+				n++;
+				
+			}
+		}
+		
+		return null;
+	}
 
 }

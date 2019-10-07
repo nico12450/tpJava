@@ -11,5 +11,9 @@ public abstract class Figure {
 	public void affiche() {
 		System.out.println(this);
 	}
+	
+	public abstract Point[] getPoints();
+	
+	public abstract int getNbPoints();
 
 }
