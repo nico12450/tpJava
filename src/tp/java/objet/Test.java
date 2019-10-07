@@ -11,8 +11,11 @@ public class Test {
 		Rond ro = new Rond(p,10);
 		ro.affiche();
 		
-		Rectangle re = new Rectangle(p,10,10);
+		Rectangle re = new Rectangle(p,10,20);
 		re.affiche();
+		
+		Carre c = new Carre(p,10);
+		c.affiche();
 
 	}
 

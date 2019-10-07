@@ -32,7 +32,7 @@ public class Rectangle {
 	
 	public String toString() {
 		
-		String s = "[RECT " + this.getPointBasGauche() + ";" + this.getPointBasDroit() + ";" + this.getPointHautGauche() + ";" + this.getPointHautDroit() + "]";
+		String s = "[" + this.getType() + this.getPointBasGauche() + ";" + this.getPointBasDroit() + ";" + this.getPointHautGauche() + ";" + this.getPointHautDroit() + "]";
 		
 		return s;
 	}
@@ -41,5 +41,9 @@ public class Rectangle {
 		System.out.println(this);
 	}
 	
-
+	protected String getType() {
+		return "RECT";
+	}
+	
+	
 }
