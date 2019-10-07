@@ -2,14 +2,14 @@ package tp.java.objet;
 
 public class Segment extends Figure {
 	
-	private Point debut;
+	//private Point debut;
 	private int longueur;
 	private boolean horizontal;
 		
 	
 	public Segment(Point debut, int longueur, boolean horizontal) {
-		super();
-		this.debut = debut;
+		super(debut);
+		//this.debut = debut;
 		this.longueur = longueur;
 		this.horizontal = horizontal;
 	}
@@ -19,13 +19,13 @@ public class Segment extends Figure {
 		
 		if(horizontal) {
 			
-			return new Point(debut.getX()+longueur,debut.getY());
+			return new Point(origine.getX()+longueur,origine.getY());
 			
 		}
 		
 		else {
 			
-			return new Point(debut.getX(), debut.getY()+longueur);
+			return new Point(origine.getX(), origine.getY()+longueur);
 		
 		}
 		
@@ -33,7 +33,7 @@ public class Segment extends Figure {
 	
 	public String toString() {
 		
-		String s = "" + debut + " à " + this.getPointFinal();
+		String s = "Segment " + origine + " à " + this.getPointFinal();
 		
 		return s;
 	}

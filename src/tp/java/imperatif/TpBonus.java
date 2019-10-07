@@ -1,4 +1,4 @@
-package tpJavaImperatif;
+package tp.java.imperatif;
 
 public class TpBonus {
 

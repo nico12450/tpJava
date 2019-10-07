@@ -34,6 +34,13 @@ public class Test {
 		
 		Segment s = new Segment(p,10,true);
 		s.affiche();
+		
+		System.out.print("création d'une figure surfaçable aléatoire : ");
+		
+		Surfacable f2 = FigureUtil.getRandomSurfacable();
+		f2.affiche();
+		
+		System.out.println("de surface : " + f2.surface());
 
 	}
 

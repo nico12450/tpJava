@@ -1,19 +1,27 @@
 package tp.java.objet;
 
-public class Rond extends Figure{
+public class Rond extends Figure implements Surfacable{
 	
-	private Point p;
+	//private Point p;
 	private int r;
 	
 	public Rond(Point p, int r) {
 		
-		this.p = p;
+		super(p);
+		
+		//this.p = p;
 		this.r = r;
 		
 	}
 	
 	public String toString() {
-		return "[ROND [" + p + ", " + r + "]]";
+		return "[ROND [" + origine + ", " + r + "]]";
+	}
+
+	@Override
+	public double surface() {
+		// TODO Auto-generated method stub
+		return Math.PI*Math.pow(r,2);
 	}
 
 }

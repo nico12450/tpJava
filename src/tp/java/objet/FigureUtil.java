@@ -32,10 +32,48 @@ public class FigureUtil {
 		
 	}
 	
+	public static Segment getRandomSegment() {
+		
+		return new Segment(getRandomPoint(), getRandomInt(0, 100), (Math.random()<0.5));
+		
+	}
+	
 	public static Figure getRandomFigure() {
 		
-		int n = getRandomInt(0,3);
+		int n = getRandomInt(0,4);
 		Figure f ;
+		
+		switch (n) {
+		
+			case 0:
+				f = getRandomRond();
+				break;
+				
+			case 1:
+				f = getRandomRectangle();
+				break;
+				
+			case 2:
+				f = getRandomCarre();
+				break;
+				
+			case 3:
+				f = getRandomSegment();
+				break;
+				
+			default:
+				f = null;
+				break;				
+			
+		}
+		
+		return f;
+	}
+	
+	public static Surfacable getRandomSurfacable() {
+		
+		int n = getRandomInt(0,3);
+		Surfacable f ;
 		
 		switch (n) {
 		

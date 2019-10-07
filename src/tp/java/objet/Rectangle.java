@@ -1,33 +1,35 @@
 package tp.java.objet;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Surfacable{
 	
-	private Point p; //point en haut à gauche
+	//private Point p; //point en haut à gauche
 	private int longueur;
 	private int largeur;
 	
 	public Rectangle(Point p, int longueur, int largeur) {
 		
-		this.p = p;
+		super(p);
+		
+		//this.p = p;
 		this.longueur = longueur;
 		this.largeur = largeur;
 		
 	}
 	
 	public Point getPointBasGauche() {
-		return new Point(p.getX(),p.getY()+largeur);
+		return new Point(origine.getX(),origine.getY()+largeur);
 	}
 	
 	public Point getPointBasDroit() {
-		return new Point(p.getX()+longueur,p.getY()+largeur);
+		return new Point(origine.getX()+longueur,origine.getY()+largeur);
 	}
 	
 	public Point getPointHautGauche() {
-		return p;
+		return origine;
 	}
 	
 	public Point getPointHautDroit() {
-		return new Point(p.getX()+longueur,p.getY());
+		return new Point(origine.getX()+longueur,origine.getY());
 	}
 	
 	public String toString() {
@@ -39,6 +41,12 @@ public class Rectangle extends Figure {
 	
 	protected String getType() {
 		return "RECT";
+	}
+
+	@Override
+	public double surface() {
+		// TODO Auto-generated method stub
+		return longueur*largeur;
 	}
 	
 	
