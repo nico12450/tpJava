@@ -3,8 +3,9 @@ package tp.java.objet;
 import java.util.Collection;
 import java.util.HashSet;
 //import java.util.LinkedList;
+import java.util.Iterator;
 
-public class FigureUtil {
+public class FigureUtil{
 	
 	private static int getRandomInt(int min, int max) {
 		
@@ -162,14 +163,28 @@ public class FigureUtil {
 	
 	public static Figure getFigureEn(Point p, Dessin d) {
 		
-		for(Figure f : d.getFigures()) {
+		/*for(Figure f : d.getFigures()) {
 			if(f.couvre(p)) {
 				return f;
 			}
+		}*/
+		
+		Iterator<Figure> it = d.getFigures().iterator();
+		
+		while(it.hasNext()) {
+			
+			Figure f = it.next();
+			
+			if(f.couvre(p)) {
+				return f;
+			}			
+			
 		}
 		
 		return null;
 		
 	}
+
+
 
 }
