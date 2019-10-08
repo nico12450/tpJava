@@ -79,16 +79,17 @@ public class Rectangle extends Figure implements Surfacable{
 
 	@Override
 	public boolean couvre(Point p) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub	
 		
-		
-		
-		return false;
+		return p.getX()>=this.origine.getX() && p.getX()<=this.getPointHautDroit().getX() && p.getY()>=this.origine.getY() && p.getY()<=this.getPointBasGauche().getY();
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(largeur, longueur);
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(largeur, longueur);
+		return result;
 	}
 
 	@Override
@@ -96,12 +97,17 @@ public class Rectangle extends Figure implements Surfacable{
 		if (this == obj) {
 			return true;
 		}
+		if (!super.equals(obj)) {
+			return false;
+		}
 		if (!(obj instanceof Rectangle)) {
 			return false;
 		}
 		Rectangle other = (Rectangle) obj;
 		return largeur == other.largeur && longueur == other.longueur;
 	}
+
+
 	
 	
 }

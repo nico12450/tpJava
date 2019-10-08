@@ -70,7 +70,14 @@ public class Segment extends Figure {
 	@Override
 	public boolean couvre(Point p) {
 		// TODO Auto-generated method stub
-		return false;
+		
+		if(horizontal) {
+			return p.getX()>=this.origine.getX() && p.getX()<=this.getPointFinal().getX() && p.getY()==this.origine.getY();
+		}
+		
+		else {
+			return p.getY()>=this.origine.getY() && p.getY()<=this.getPointFinal().getY() && p.getX()==this.origine.getX();
+		}
 	}
 
 

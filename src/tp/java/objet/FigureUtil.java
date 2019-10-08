@@ -155,10 +155,21 @@ public class FigureUtil {
 		
 	}
 
-	// à implementer
 	public static double distance(Point p1, Point p2) {
 		// TODO Auto-generated method stub
 		return Math.sqrt(Math.pow((p1.getX()-p2.getX()), 2) + Math.pow((p1.getY()-p2.getY()), 2));
+	}
+	
+	public static Figure getFigureEn(Point p, Dessin d) {
+		
+		for(Figure f : d.getFigures()) {
+			if(f.couvre(p)) {
+				return f;
+			}
+		}
+		
+		return null;
+		
 	}
 
 }

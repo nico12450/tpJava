@@ -10,7 +10,7 @@ public class Test {
 		
 		System.out.print("création d'un point : ");
 		
-		Point p = new Point(1,1);
+		Point p = new Point(2,2);
 		System.out.println(p);
 		
 		System.out.print("création d'un rond : ");
@@ -48,6 +48,22 @@ public class Test {
 		HashSet<Figure> l = (HashSet<Figure>) FigureUtil.genere(10);
 		Dessin d = new Dessin(l);
 		d.affiche();
+		
+		
+		Point p2 = new Point (20,20);
+		//Point p3 = new Point (8,8);
+		//Rond r2 = new Rond(p,20);
+		//Rectangle r2 = new Rectangle(p3,10,10);
+		//System.out.println(r2.couvre(p2));
+		//System.out.println(r2.couvre(p2));
+		
+		
+		Figure f3 = FigureUtil.getFigureEn(p2, d);
+		
+		if(f3 != null) {
+			System.out.println("la figure : " + f3);
+			System.out.println("couvre le point : " + p2);
+		}
 
 	}
 

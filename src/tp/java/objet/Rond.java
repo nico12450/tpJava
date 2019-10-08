@@ -1,6 +1,7 @@
 package tp.java.objet;
 
 import java.util.LinkedList;
+import java.util.Objects;
 
 public class Rond extends Figure implements Surfacable{
 	
@@ -51,7 +52,30 @@ public class Rond extends Figure implements Surfacable{
 	@Override
 	public boolean couvre(Point p) {
 		// TODO Auto-generated method stub
-		return this.origine == p && FigureUtil.distance(this.origine,p)<this.r;
+		return FigureUtil.distance(this.origine,p)<this.r;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = super.hashCode();
+		result = prime * result + Objects.hash(r);
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (!super.equals(obj)) {
+			return false;
+		}
+		if (!(obj instanceof Rond)) {
+			return false;
+		}
+		Rond other = (Rond) obj;
+		return r == other.r;
 	}
 
 }
