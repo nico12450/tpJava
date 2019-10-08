@@ -1,5 +1,8 @@
 package tp.java.objet;
 
+import java.util.Collection;
+//import java.util.LinkedList;
+
 public abstract class Figure {
 	
 	public Point origine;
@@ -14,6 +17,10 @@ public abstract class Figure {
 	
 	public abstract Point[] getPoints();
 	
+	public abstract Collection<Point> getPointsList();
+	
 	public abstract int getNbPoints();
+	
+	public abstract boolean couvre(Point p);
 
 }

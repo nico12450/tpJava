@@ -1,5 +1,8 @@
 package tp.java.objet;
 
+import java.util.HashSet;
+//import java.util.LinkedList;
+
 public class Test {
 
 	public static void main(String[] args) {
@@ -27,7 +30,7 @@ public class Test {
 		
 		System.out.print("création d'une figure aléatoire : ");
 		
-		Figure f = FigureUtil.getRandomFigure();
+		Figure f = FigureUtil.getRandomFigure(0,100);
 		f.affiche();
 		
 		System.out.print("création d'un segment : ");
@@ -37,10 +40,14 @@ public class Test {
 		
 		System.out.print("création d'une figure surfaçable aléatoire : ");
 		
-		Surfacable f2 = FigureUtil.getRandomSurfacable();
+		Surfacable f2 = FigureUtil.getRandomSurfacable(0,100);
 		f2.affiche();
 		
 		System.out.println("de surface : " + f2.surface());
+		
+		HashSet<Figure> l = (HashSet<Figure>) FigureUtil.genere(10);
+		Dessin d = new Dessin(l);
+		d.affiche();
 
 	}
 
