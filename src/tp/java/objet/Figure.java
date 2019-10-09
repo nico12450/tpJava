@@ -8,9 +8,19 @@ public abstract class Figure implements Comparable<Figure>{
 	
 	public Point origine;
 	private String key;
+	private Couleur couleur;
 	
 	public Figure(Point origine) {
+		
 		this.origine = origine;
+		this.couleur = Couleur.getCouleurDefault();
+	}
+	
+	public Figure(Point origine, Couleur c) {
+		
+		this.origine = origine;
+		this.couleur = c;
+		
 	}
 	
 	public void affiche() {
@@ -50,6 +60,12 @@ public abstract class Figure implements Comparable<Figure>{
 	
 	public String getKey() {
 		return this.key;
+	}
+	
+	public Couleur getCouleur() {
+		
+		return this.couleur;
+		
 	}
 
 }

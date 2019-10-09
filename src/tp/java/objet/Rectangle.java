@@ -19,6 +19,16 @@ public class Rectangle extends Figure implements Surfacable{
 		
 	}
 	
+	public Rectangle(Point p, int longueur, int largeur, Couleur c) {
+		
+		super(p,c);
+		
+		//this.p = p;
+		this.longueur = longueur;
+		this.largeur = largeur;
+		
+	}
+	
 	public Point getPointBasGauche() {
 		return new Point(origine.getX(),origine.getY()+largeur);
 	}
@@ -140,8 +150,6 @@ public class Rectangle extends Figure implements Surfacable{
 		// TODO Auto-generated method stub
 		return true;
 	}
-
-
 	
 	
 }

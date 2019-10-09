@@ -251,5 +251,19 @@ public class FigureUtil{
 	public static Figure get(String s) {
 		return figureMap.get(s);
 	}
+	
+	public static boolean figureOutOfBounds(Figure f, int min, int max) {
+		
+		Point[] t = f.getPoints();
+		
+		for(Point p : t) {
+			if(p.getX()<min || p.getX()>max || p.getY()<min || p.getY()>max) {
+				return false;
+			}
+		}
+		
+		return false;
+		
+	}
 
 }

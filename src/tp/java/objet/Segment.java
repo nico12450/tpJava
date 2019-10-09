@@ -5,16 +5,24 @@ import java.util.Objects;
 
 public class Segment extends Figure {
 	
-	//private Point debut;
 	private int longueur;
 	private boolean horizontal;
 		
 	
 	public Segment(Point debut, int longueur, boolean horizontal) {
+		
 		super(debut);
-		//this.debut = debut;
 		this.longueur = longueur;
 		this.horizontal = horizontal;
+		
+	}
+	
+	public Segment(Point debut, int longueur, boolean horizontal, Couleur c) {
+		
+		super(debut,c);
+		this.longueur = longueur;
+		this.horizontal = horizontal;
+		
 	}
 
 

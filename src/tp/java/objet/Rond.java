@@ -5,14 +5,18 @@ import java.util.Objects;
 
 public class Rond extends Figure implements Surfacable{
 	
-	//private Point p;
 	private int r;
 	
 	public Rond(Point p, int r) {
 		
 		super(p);
+		this.r = r;
 		
-		//this.p = p;
+	}
+	
+	public Rond(Point p, int r, Couleur c) {
+		
+		super(p,c);
 		this.r = r;
 		
 	}
