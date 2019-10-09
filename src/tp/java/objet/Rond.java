@@ -91,4 +91,10 @@ public class Rond extends Figure implements Surfacable{
 		return (int) ( this.distanceOrigine()-f.distanceOrigine());
 	}
 
+	@Override
+	public boolean isSurfacable() {
+		// TODO Auto-generated method stub
+		return true;
+	}
+
 }

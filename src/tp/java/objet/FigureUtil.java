@@ -190,13 +190,37 @@ public class FigureUtil{
 	
 	public static List<Figure> trieProcheOrigine(Dessin d){
 		
-		List<Figure> sortedFigs =  d.getFigures();
+		List<Figure> sortedFigs =  new ArrayList<Figure>(d.getFigures());
 		Collections.sort(sortedFigs);
 		
 		return sortedFigs;
 		
 	}
+	
+	public static List<Surfacable> trieDominant(Dessin dessin){
+		
+		List<Surfacable> surfacables =  new ArrayList<Surfacable>();
+		
+		for (Figure f : dessin.getFigures()) {
+			if (f instanceof Surfacable) {
+				surfacables.add((Surfacable) f);
+			}
+		}
+		
+		
+		Collections.sort(surfacables, new ComparaisonSurface());
+		
+		return surfacables;
 
-
+		
+	}
+	
+	public static void afficheListe(List<Figure> l) {
+		
+		for(Figure f : l) {
+			f.affiche();
+		}
+		
+	}
 
 }

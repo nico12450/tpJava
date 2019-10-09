@@ -1,5 +1,6 @@
 package tp.java.objet;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 //import java.util.LinkedList;
@@ -47,9 +48,8 @@ public class Test {
 		System.out.println("de surface : " + f2.surface());
 		
 		List<Figure> l = FigureUtil.genere(10);
+		
 		Dessin d = new Dessin(l);
-		d.affiche();
-		FigureUtil.trieProcheOrigine(d);
 		d.affiche();
 		
 		Point p2 = new Point (20,20);
@@ -66,6 +66,12 @@ public class Test {
 			System.out.println("la figure : " + f3);
 			System.out.println("couvre le point : " + p2);
 		}
+		
+		d = new Dessin(FigureUtil.trieProcheOrigine(d));
+		d.affiche();
+		
+		ArrayList<Surfacable> t = (ArrayList<Surfacable>) FigureUtil.trieDominant(d);
+		System.out.println(t.toString());
 
 	}
 

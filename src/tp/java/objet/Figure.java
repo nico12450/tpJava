@@ -44,5 +44,7 @@ public abstract class Figure implements Comparable<Figure>{
 	public abstract double distanceOrigine();
 	
 	public abstract int compareTo(Figure f);
+	
+	public abstract boolean isSurfacable();
 
 }

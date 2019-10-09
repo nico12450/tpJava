@@ -120,4 +120,11 @@ public class Segment extends Figure {
 	}
 
 
+	@Override
+	public boolean isSurfacable() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
 }
