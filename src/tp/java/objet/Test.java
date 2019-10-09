@@ -72,6 +72,9 @@ public class Test {
 		
 		ArrayList<Surfacable> t = (ArrayList<Surfacable>) FigureUtil.trieDominant(d);
 		System.out.println(t.toString());
+		
+		System.out.println(FigureUtil.get("FigureN°1"));
+		System.out.println(FigureUtil.figureMap);
 
 	}
 

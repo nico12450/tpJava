@@ -7,6 +7,7 @@ import java.util.Objects;
 public abstract class Figure implements Comparable<Figure>{
 	
 	public Point origine;
+	private String key;
 	
 	public Figure(Point origine) {
 		this.origine = origine;
@@ -46,5 +47,9 @@ public abstract class Figure implements Comparable<Figure>{
 	public abstract int compareTo(Figure f);
 	
 	public abstract boolean isSurfacable();
+	
+	public String getKey() {
+		return this.key;
+	}
 
 }

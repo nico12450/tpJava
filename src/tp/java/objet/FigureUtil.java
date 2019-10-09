@@ -3,12 +3,16 @@ package tp.java.objet;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 //import java.util.LinkedList;
 import java.util.Iterator;
 import java.util.List;
 
 public class FigureUtil{
+	
+	public static HashMap<String,Figure> figureMap = new HashMap<String,Figure>();
+	private static int nbFigures; 
 	
 	private static int getRandomInt(int min, int max) {
 		
@@ -24,25 +28,41 @@ public class FigureUtil{
 	
 	public static Rond getRandomRond(int min, int max, int maxr) {
 		
-		return new Rond(getRandomPoint(min,max),getRandomInt(1, maxr));
+		Rond r = new Rond(getRandomPoint(min,max),getRandomInt(1, maxr));
+		nbFigures++;
+		figureMap.put(generateKey(), r);
+		
+		return r;
 		
 	}
 	
 	public static Rectangle getRandomRectangle(int min, int max, int maxl) {
 		
-		return new Rectangle(getRandomPoint(min,max), getRandomInt(1, maxl), getRandomInt(1, maxl));
+		Rectangle r = new Rectangle(getRandomPoint(min,max), getRandomInt(1, maxl), getRandomInt(1, maxl));
+		nbFigures++;
+		figureMap.put(generateKey(), r);
+		
+		return r;
 		
 	}
 	
 	public static Carre getRandomCarre(int min, int max, int maxl) {
 		
-		return new Carre(getRandomPoint(min,max), getRandomInt(0, maxl));
+		Carre c = new Carre(getRandomPoint(min,max), getRandomInt(0, maxl));
+		nbFigures++;
+		figureMap.put(generateKey(), c);
+		
+		return c;
 		
 	}
 	
 	public static Segment getRandomSegment(int min, int max, int maxl) {
 		
-		return new Segment(getRandomPoint(min,max), getRandomInt(1, maxl), (Math.random()<0.5));
+		Segment s = new Segment(getRandomPoint(min,max), getRandomInt(1, maxl), (Math.random()<0.5));
+		nbFigures++;
+		figureMap.put(generateKey(), s);
+		
+		return s;
 		
 	}
 	
@@ -221,6 +241,15 @@ public class FigureUtil{
 			f.affiche();
 		}
 		
+	}
+	
+	private static String generateKey() {
+		return "FigureN°" + FigureUtil.nbFigures;
+		
+	}
+	
+	public static Figure get(String s) {
+		return figureMap.get(s);
 	}
 
 }
