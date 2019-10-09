@@ -1,7 +1,9 @@
 package tp.java.objet;
 
-import java.util.Collection;
-import java.util.HashSet;
+import java.util.ArrayList;
+//import java.util.Collection;
+import java.util.List;
+//import java.util.HashSet;
 //import java.util.LinkedList;
 
 public class Dessin {	
@@ -10,25 +12,27 @@ public class Dessin {
 	//private LinkedList<Figure> l = new LinkedList<Figure>();
 	
 	//le hashset permet d'éviter les doublons
-	private HashSet<Figure> h = new HashSet<Figure>();
+	private ArrayList<Figure> l = new ArrayList<Figure>();
 	
 	public Dessin() {
 		
 	}
 	
-	public Dessin(Collection<Figure> l) {
-		this.h = (HashSet<Figure>) l;
+	public Dessin(List<Figure> l) {
+		//this.h = (HashSet<Figure>) l;
+		
+		this.l.addAll(l);
 	}
 	
 	public boolean add(Figure f) {
 		
-		return h.add(f);
+		return l.add(f);
 		
 	}
 
-	public Collection<Figure> getFigures() {
+	public List<Figure> getFigures() {
 		
-		return h;
+		return l;
 		
 	}
 	
@@ -36,7 +40,7 @@ public class Dessin {
 		
 		System.out.println("affichage des figures du dessin");
 		
-		for(Figure f : h) {
+		for(Figure f : l) {
 			f.affiche();
 		}
 		

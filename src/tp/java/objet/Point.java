@@ -62,6 +62,10 @@ public class Point {
 		Point other = (Point) obj;
 		return INIT_X == other.INIT_X && INIT_Y == other.INIT_Y && x == other.x && y == other.y;
 	}
+	
+	public double distance(Point p) {
+		return FigureUtil.distance(this, p);
+	}
 
 
 }

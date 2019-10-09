@@ -1,6 +1,7 @@
 package tp.java.objet;
 
 import java.util.HashSet;
+import java.util.List;
 //import java.util.LinkedList;
 
 public class Test {
@@ -45,10 +46,11 @@ public class Test {
 		
 		System.out.println("de surface : " + f2.surface());
 		
-		HashSet<Figure> l = (HashSet<Figure>) FigureUtil.genere(10);
+		List<Figure> l = FigureUtil.genere(10);
 		Dessin d = new Dessin(l);
 		d.affiche();
-		
+		FigureUtil.trieProcheOrigine(d);
+		d.affiche();
 		
 		Point p2 = new Point (20,20);
 		//Point p3 = new Point (8,8);

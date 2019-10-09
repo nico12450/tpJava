@@ -107,6 +107,34 @@ public class Rectangle extends Figure implements Surfacable{
 		return largeur == other.largeur && longueur == other.longueur;
 	}
 
+	@Override
+	public double distanceOrigine() {
+		// TODO Auto-generated method stub
+		
+		Point pInit = new Point();
+		
+		double minDist = this.origine.distance(pInit);
+		
+		for(Point p : this.getPoints()) {
+			
+			if(p.distance(pInit)<minDist) {
+				
+				minDist = p.distance(pInit);
+				
+			}
+			
+		}
+		
+		return minDist;
+	}
+
+
+	@Override
+	public int compareTo(Figure f) {
+		// TODO Auto-generated method stub
+		return (int) (this.distanceOrigine()-f.distanceOrigine());
+	}
+
 
 	
 	

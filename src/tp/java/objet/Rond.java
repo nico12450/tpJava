@@ -78,4 +78,17 @@ public class Rond extends Figure implements Surfacable{
 		return r == other.r;
 	}
 
+	@Override
+	public double distanceOrigine() {
+		// TODO Auto-generated method stub
+		return this.origine.distance(new Point());
+	}
+
+
+	@Override
+	public int compareTo(Figure f) {
+		// TODO Auto-generated method stub
+		return (int) ( this.distanceOrigine()-f.distanceOrigine());
+	}
+
 }

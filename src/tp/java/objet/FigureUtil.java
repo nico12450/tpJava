@@ -1,9 +1,12 @@
 package tp.java.objet;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
 //import java.util.LinkedList;
 import java.util.Iterator;
+import java.util.List;
 
 public class FigureUtil{
 	
@@ -142,9 +145,9 @@ public class FigureUtil{
 		
 	}
 	
-	public static Collection<Figure> genere(int n){
+	public static List<Figure> genere(int n){
 		
-		Collection<Figure> l = new HashSet<Figure>();
+		ArrayList<Figure> l = new ArrayList<Figure>();
 		
 		for(int i = 0; i<n; i++) {
 			
@@ -182,6 +185,15 @@ public class FigureUtil{
 		}
 		
 		return null;
+		
+	}
+	
+	public static List<Figure> trieProcheOrigine(Dessin d){
+		
+		List<Figure> sortedFigs =  d.getFigures();
+		Collections.sort(sortedFigs);
+		
+		return sortedFigs;
 		
 	}
 

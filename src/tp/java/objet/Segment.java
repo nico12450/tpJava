@@ -106,4 +106,18 @@ public class Segment extends Figure {
 	}
 
 
+	@Override
+	public double distanceOrigine() {
+		// TODO Auto-generated method stub
+		return Math.min(this.origine.distance(new Point()), this.getPointFinal().distance(new Point()));
+	}
+
+
+	@Override
+	public int compareTo(Figure f) {
+		// TODO Auto-generated method stub
+		return (int) (this.distanceOrigine() - f.distanceOrigine());
+	}
+
+
 }

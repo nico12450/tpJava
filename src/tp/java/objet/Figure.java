@@ -4,7 +4,7 @@ import java.util.Collection;
 //import java.util.LinkedList;
 import java.util.Objects;
 
-public abstract class Figure {
+public abstract class Figure implements Comparable<Figure>{
 	
 	public Point origine;
 	
@@ -40,5 +40,9 @@ public abstract class Figure {
 		Figure other = (Figure) obj;
 		return Objects.equals(origine, other.origine);
 	}
+	
+	public abstract double distanceOrigine();
+	
+	public abstract int compareTo(Figure f);
 
 }
