@@ -1,8 +1,10 @@
 package tp.java.objet;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Scanner;
 //import java.util.LinkedList;
 
 public class Test {
@@ -75,6 +77,17 @@ public class Test {
 		
 		System.out.println(FigureUtil.get("FigureN°1"));
 		System.out.println(FigureUtil.figureMap);
+		
+		try {
+			FigureUtil.imprime(d);
+		} catch (ImpressionHorsLimiteException | IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("entrez un caractere pour terminer le programme et supprimer le fichier créé");
+		sc.next();
 
 	}
 

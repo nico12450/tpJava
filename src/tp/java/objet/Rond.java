@@ -101,4 +101,10 @@ public class Rond extends Figure implements Surfacable{
 		return true;
 	}
 
+	@Override
+	public String dessin() {
+		// TODO Auto-generated method stub
+		return "";
+	}
+
 }

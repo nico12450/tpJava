@@ -67,5 +67,7 @@ public abstract class Figure implements Comparable<Figure>{
 		return this.couleur;
 		
 	}
+	
+	public abstract String dessin();
 
 }

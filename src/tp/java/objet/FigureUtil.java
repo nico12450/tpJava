@@ -1,5 +1,8 @@
 package tp.java.objet;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -267,6 +270,38 @@ public class FigureUtil{
 		}
 		
 		return false;
+		
+	}
+	
+	public static void imprime(Dessin d) throws ImpressionHorsLimiteException, IOException{
+		
+		File fichierDessin = File.createTempFile("dessinFichier", ".txt", new File("C:\\Users\\formation\\Documents"));
+		fichierDessin.deleteOnExit();
+		
+		FileWriter writer = new FileWriter(fichierDessin);
+		//writer.write("test");
+		
+		
+		for (Figure f : d.getFigures()) {
+			
+			if(FigureUtil.figureOutOfBounds(f, 0, 100)) {
+				
+				throw new ImpressionHorsLimiteException("figure hors limite");
+				
+			}
+			
+			else {
+				
+				writer.write("\n");
+				writer.write(f.toString() + "\n\n");
+				writer.write(f.dessin());
+				writer.write("=================================================================================================\n\n");
+				
+			}
+						
+		}
+		
+		writer.close();		
 		
 	}
 

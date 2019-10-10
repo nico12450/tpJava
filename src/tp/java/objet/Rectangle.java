@@ -150,6 +150,36 @@ public class Rectangle extends Figure implements Surfacable{
 		// TODO Auto-generated method stub
 		return true;
 	}
+
+	@Override
+	public String dessin() {
+		// TODO Auto-generated method stub
+		String s = "";
+		
+		for(int i = 0; i<this.largeur; i++) {
+			
+			for(int j = 0; j<this.longueur; j++) {
+				
+				if(i == 0 || i == this.largeur-1) {
+					s+="*";
+				}
+				
+				else if(j == 0 || j == this.longueur-1) {
+					s+="*";
+				}
+				
+				else {
+					s+=" ";
+				}
+				
+			}
+			
+			s+="\n";
+			
+		}
+		
+		return s;
+	}
 	
 	
 }

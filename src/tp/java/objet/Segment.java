@@ -134,5 +134,11 @@ public class Segment extends Figure {
 		return false;
 	}
 
+	@Override
+	public String dessin() {
+		// TODO Auto-generated method stub
+		return "";
+	}
+
 
 }
