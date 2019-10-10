@@ -47,7 +47,7 @@ public class Rectangle extends Figure implements Surfacable{
 	
 	public String toString() {
 		
-		String s = "[" + this.getType() + this.getPointBasGauche() + ";" + this.getPointBasDroit() + ";" + this.getPointHautGauche() + ";" + this.getPointHautDroit() + "]";
+		String s = "[" + this.getType() + this.getPointBasGauche() + ";" + this.getPointBasDroit() + ";" + this.getPointHautGauche() + ";" + this.getPointHautDroit() + "] " + "couleur : " + this.getCouleur();
 		
 		return s;
 	}

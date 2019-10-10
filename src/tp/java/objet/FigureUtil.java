@@ -26,9 +26,13 @@ public class FigureUtil{
 		
 	}
 	
+	private static Couleur getRandomCouleur() {
+		return Couleur.values()[getRandomInt(0, Couleur.values().length)];
+	}
+	
 	public static Rond getRandomRond(int min, int max, int maxr) {
 		
-		Rond r = new Rond(getRandomPoint(min,max),getRandomInt(1, maxr));
+		Rond r = new Rond(getRandomPoint(min,max),getRandomInt(1, maxr), getRandomCouleur());
 		nbFigures++;
 		figureMap.put(generateKey(), r);
 		
@@ -38,7 +42,7 @@ public class FigureUtil{
 	
 	public static Rectangle getRandomRectangle(int min, int max, int maxl) {
 		
-		Rectangle r = new Rectangle(getRandomPoint(min,max), getRandomInt(1, maxl), getRandomInt(1, maxl));
+		Rectangle r = new Rectangle(getRandomPoint(min,max), getRandomInt(1, maxl), getRandomInt(1, maxl),getRandomCouleur());
 		nbFigures++;
 		figureMap.put(generateKey(), r);
 		
@@ -48,7 +52,7 @@ public class FigureUtil{
 	
 	public static Carre getRandomCarre(int min, int max, int maxl) {
 		
-		Carre c = new Carre(getRandomPoint(min,max), getRandomInt(0, maxl));
+		Carre c = new Carre(getRandomPoint(min,max), getRandomInt(0, maxl),getRandomCouleur());
 		nbFigures++;
 		figureMap.put(generateKey(), c);
 		
@@ -58,7 +62,7 @@ public class FigureUtil{
 	
 	public static Segment getRandomSegment(int min, int max, int maxl) {
 		
-		Segment s = new Segment(getRandomPoint(min,max), getRandomInt(1, maxl), (Math.random()<0.5));
+		Segment s = new Segment(getRandomPoint(min,max), getRandomInt(1, maxl), (Math.random()<0.5),getRandomCouleur());
 		nbFigures++;
 		figureMap.put(generateKey(), s);
 		

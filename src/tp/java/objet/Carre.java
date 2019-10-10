@@ -13,13 +13,20 @@ public class Carre extends Rectangle {
 		
 	}
 	
+	public Carre(Point p, int c, Couleur co) {
+		super(p,c,c,co);
+		//this.c = c;
+		//this.p = p;
+		
+	}
+	
 	protected String getType() {
 		return "CARRE";
 		
 	}
 	
 	public String toString() {
-		String s = "[" + this.getType() + this.getPointBasGauche() + ";" + this.getPointBasDroit() + ";" + this.getPointHautGauche() + ";" + this.getPointHautDroit() + "]";
+		String s = "[" + this.getType() + this.getPointBasGauche() + ";" + this.getPointBasDroit() + ";" + this.getPointHautGauche() + ";" + this.getPointHautDroit() + "] " + "couleur : " + this.getCouleur();
 		
 		return s;
 	}

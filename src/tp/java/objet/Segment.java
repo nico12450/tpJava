@@ -44,7 +44,7 @@ public class Segment extends Figure {
 	
 	public String toString() {
 		
-		String s = "Segment " + origine + " à " + this.getPointFinal();
+		String s = "Segment " + origine + " à " + this.getPointFinal() + " couleur : " + this.getCouleur();
 		
 		return s;
 	}

@@ -22,7 +22,7 @@ public class Rond extends Figure implements Surfacable{
 	}
 	
 	public String toString() {
-		return "[ROND [" + origine + ", " + r + "]]";
+		return "[ROND [" + origine + ", " + r + "]] " + "couleur : " + this.getCouleur();
 	}
 
 	@Override
