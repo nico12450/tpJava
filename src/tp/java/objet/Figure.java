@@ -49,7 +49,7 @@ public abstract class Figure implements Comparable<Figure>{
 			return false;
 		}
 		Figure other = (Figure) obj;
-		return Objects.equals(origine, other.origine);
+		return Objects.equals(origine, other.origine) && this.couleur == other.couleur;
 	}
 	
 	public abstract double distanceOrigine();
