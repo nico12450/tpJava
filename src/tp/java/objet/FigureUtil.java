@@ -304,5 +304,34 @@ public class FigureUtil{
 		writer.close();		
 		
 	}
+	
+	public static void imprime2(Dessin d) throws ImpressionHorsLimiteException, IOException{
+		
+		File fichierDessin = File.createTempFile("dessinFichier", ".txt", new File("C:\\Users\\formation\\Documents"));
+		fichierDessin.deleteOnExit();
+		
+		FileWriter writer = new FileWriter(fichierDessin);
+		//writer.write("test");
+		
+		
+		for (Figure f : d.getFigures()) {
+			
+			if(FigureUtil.figureOutOfBounds(f, 0, 100)) {
+				
+				throw new ImpressionHorsLimiteException("figure hors limite");
+				
+			}
+			
+			else {
+				
+				
+				
+			}
+						
+		}
+		
+		writer.close();		
+		
+	}
 
 }
