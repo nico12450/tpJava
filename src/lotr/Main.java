@@ -3,6 +3,7 @@ package lotr;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
 
@@ -11,7 +12,23 @@ public class Main {
 		
 		List<Party> parties = initialize();
 		
+		List<Party> l1 = new ArrayList<Party>();
+		
 		// TODO Récuperer les groupes contenant au moins une femme. #girlpower
+		/*l1 = parties.stream().filter(p -> {
+			for(Character c : p.getMembers()) {
+				if (c.getGender() == Gender.FEMALE) {
+					return true;
+				}
+			}
+			return false;
+		}).collect(Collectors.toList());*/
+		
+		l1 = parties.stream()
+				.filter(p -> p.getMembers().stream()
+						.filter(c -> c.getGender().equals(Gender.FEMALE))
+						.count()>0)
+				.collect(Collectors.toList());
 		
 		// TODO Récuperer les groupes dont la taille totale ne depasse pas 600cm.
 				
