@@ -40,7 +40,7 @@ public class Test {
 		
 		Period p = Period.between(d3, d4);
 		
-		System.out.printf("%d ans %d mois %djours", p.getYears(),p.getMonths(),p.getDays());
+		System.out.printf("%d ans %d mois %d jours", p.getYears(),p.getMonths(),p.getDays());
 		
 		
 		
