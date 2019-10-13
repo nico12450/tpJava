@@ -13,6 +13,7 @@ public class Main {
 		List<Party> parties = initialize();
 		
 		List<Party> l1 = new ArrayList<Party>();
+		List<Party> l2 = new ArrayList<Party>();
 		
 		// TODO Récuperer les groupes contenant au moins une femme. #girlpower
 		/*l1 = parties.stream().filter(p -> {
@@ -31,6 +32,11 @@ public class Main {
 				.collect(Collectors.toList());
 		
 		// TODO Récuperer les groupes dont la taille totale ne depasse pas 600cm.
+		
+		l2 = parties.stream()
+				.filter(g -> g.getMembers().stream()
+						.map(m -> m.getHeight()).reduce(0, (a,b) -> a+b) > 600)
+				.collect(Collectors.toList());
 				
 		// TODO Récuperer dans une liste de tous les personnages dont la taille est supèrieure à la taille moyenne de leur race.
 
